@@ -1,0 +1,11 @@
+{
+  "Show": false,
+  "Type": "CG",
+  "Key": "n",
+  "To_Press": "",
+  "Random_Delay": "Active",
+  "Random_Mode": "Rapide",
+  "Delay_Down": false,
+  "Delay_Up": false,
+  "OnActiveKey": "On_Key_Active"
+}
