@@ -34,7 +34,7 @@ savefile = True
 SavedFileProfile = False
 
 system('cls')
-system('title AUTO-CLICKER - [ ! Cuchi\'#1632 ]')
+system('title AUTO-CLICKER 1.4.9 - [ ! Cuchi\'#1632 ]')
 
 def profile_settings_print():
   global SavedFileProfile
@@ -78,15 +78,16 @@ if not os.path.exists('profile\\profile.json'):
       exit()
 
   gui.title("Configuration")
-  gui.configure(bg='#28B463')
-  Label(gui, text="Que souhaitez-vous utiliser : ", bg='#28B463', font='BOLD').grid(row=0)
+  gui.iconbitmap("imgs\\gear.ico")
+  gui.configure(bg='#76C2AF')
+  Label(gui, text="Que souhaitez-vous utiliser : ", bg='#76C2AF', font='BOLD').grid(row=0)
   var1 = IntVar()
-  Checkbutton(gui, text="Clique Gauche", variable=var1, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
+  Checkbutton(gui, text="Clique Gauche", variable=var1, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
   var2 = IntVar()
-  Checkbutton(gui, text="Clique Droit", variable=var2, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=2, sticky=W)
+  Checkbutton(gui, text="Clique Droit", variable=var2, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=2, sticky=W)
   var3 = IntVar()
-  Checkbutton(gui, text="Touche Perso.", variable=var3, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=3, sticky=W)
-  Button(gui, text='Valider', command=selectedmode, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+  Checkbutton(gui, text="Touche Perso.", variable=var3, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=3, sticky=W)
+  Button(gui, text='Valider', command=selectedmode, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
   gui.mainloop()
 
   if Selected_Mode == '':
@@ -122,16 +123,16 @@ if not os.path.exists('profile\\profile.json'):
       rdmgui.destroy()
 
   def open_dem():
-    img = Image.open('demo_imgs\\demo_rdm_cps.jpg')
+    img = Image.open('imgs\\demo_rdm_cps.jpg')
     img.show()
 
   rdmgui.title("Mode Aléatoire")
-  rdmgui.configure(bg='#28B463')
-  Label(rdmgui, text="Souhaitez-vous un délai aléatoire entre chaque clique ?", bg='#28B463').grid(row=0, sticky=W)
+  rdmgui.configure(bg='#76C2AF')
+  Label(rdmgui, text="Souhaitez-vous un délai aléatoire entre chaque clique ?", bg='#76C2AF').grid(row=0, sticky=W)
   rep = IntVar()
-  Checkbutton(rdmgui, text="Oui", variable=rep, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
-  Button(rdmgui, text='Voir la démo', command=open_dem, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='1', width='10', 	bd='5', relief=RIDGE).grid(row=2, pady=4)
-  Button(rdmgui, text='TERMINER', command=rdm_ch, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+  Checkbutton(rdmgui, text="Oui", variable=rep, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
+  Button(rdmgui, text='Voir la démo', command=open_dem, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='1', width='10', 	bd='5', relief=RIDGE).grid(row=2, pady=4)
+  Button(rdmgui, text='TERMINER', command=rdm_ch, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
   rdmgui.mainloop()
 
   if Random_Rep == '':
@@ -171,19 +172,19 @@ if not os.path.exists('profile\\profile.json'):
         exit()
 
     moderdm.title("Mode de délai")
-    moderdm.configure(bg='#28B463')
-    Label(moderdm, text="Séléctionnez le type de délai aléatoire :", bg='#28B463').grid(row=0, sticky=W)
+    moderdm.configure(bg='#76C2AF')
+    Label(moderdm, text="Séléctionnez le type de délai aléatoire :", bg='#76C2AF').grid(row=0, sticky=W)
     rep = IntVar()
-    Checkbutton(moderdm, text="Faible", variable=rep, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
+    Checkbutton(moderdm, text="Faible", variable=rep, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
     rep2 = IntVar()
-    Checkbutton(moderdm, text="Normal", variable=rep2, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=2, sticky=W)
+    Checkbutton(moderdm, text="Normal", variable=rep2, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=2, sticky=W)
     rep3 = IntVar()
-    Checkbutton(moderdm, text="Rapide", variable=rep3, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=3, sticky=W)
+    Checkbutton(moderdm, text="Rapide", variable=rep3, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=3, sticky=W)
     rep4 = IntVar()
-    Checkbutton(moderdm, text="Très Rapide", variable=rep4, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=4, sticky=W)
+    Checkbutton(moderdm, text="Très Rapide", variable=rep4, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=4, sticky=W)
     rep5 = IntVar()
-    Checkbutton(moderdm, text="Inhumain", variable=rep5, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=5, sticky=W)
-    Button(moderdm, text='TERMINER', command=rdm_ch, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=6, pady=4)
+    Checkbutton(moderdm, text="Inhumain", variable=rep5, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=5, sticky=W)
+    Button(moderdm, text='TERMINER', command=rdm_ch, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=6, pady=4)
     moderdm.mainloop()
 
   if Random_Rep == 'Inactive':
@@ -221,11 +222,11 @@ if not os.path.exists('profile\\profile.json'):
       secgui.destroy()
 
   secgui.title("Mode d'auto-click")
-  secgui.configure(bg='#28B463')
-  Label(secgui, text="Souhaitez-vous que l'auto-click s'active uniquement lorsque\nque la touche est pressée ou alors appuyer une\nseule fois pour qu'il reste activé ?", bg='#28B463').grid(row=0, sticky=W)
+  secgui.configure(bg='#76C2AF')
+  Label(secgui, text="Souhaitez-vous que l'auto-click s'active uniquement lorsque\nque la touche est pressée ou alors appuyer une\nseule fois pour qu'il reste activé ?", bg='#76C2AF').grid(row=0, sticky=W)
   resp1 = IntVar()
-  Checkbutton(secgui, text="Une seule fois", variable=resp1, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
-  Button(secgui, text='TERMINER', command=gui_kp_yn, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+  Checkbutton(secgui, text="Une seule fois", variable=resp1, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
+  Button(secgui, text='TERMINER', command=gui_kp_yn, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
   secgui.mainloop()
 
   print(' ')
@@ -318,14 +319,14 @@ if not os.path.exists('profile\\profile.json'):
       print(Fore.GREEN + "Configuration sauvegardée.")
 
     guisave.title("Sauvegarde")
-    guisave.configure(bg='#28B463')
-    Label(guisave, text="Souhaitez-vous sauvegarder votre profile ?", bg='#28B463').grid(row=0, sticky=W)
+    guisave.configure(bg='#76C2AF')
+    Label(guisave, text="Souhaitez-vous sauvegarder votre profile ?", bg='#76C2AF').grid(row=0, sticky=W)
     save = IntVar()
-    Checkbutton(guisave, text="Oui", variable=save, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
+    Checkbutton(guisave, text="Oui", variable=save, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
     # Faire un case ne plus monter : est si FALSE, ne plus afficher ce message
     show = IntVar()
-    Checkbutton(guisave, text="Ne plus montrer après", variable=show, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=2, sticky=W)
-    Button(guisave, text='Valider', command=response_for_save, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+    Checkbutton(guisave, text="Ne plus montrer après", variable=show, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=2, sticky=W)
+    Button(guisave, text='Valider', command=response_for_save, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
     guisave.mainloop()
 elif os.path.exists('profile\\profile.json'):
   with open('profile\\profile.json') as profile_file:
@@ -362,15 +363,16 @@ elif os.path.exists('profile\\profile.json'):
             exit()
 
         gui.title("Configuration")
-        gui.configure(bg='#28B463')
-        Label(gui, text="Que souhaitez-vous utiliser : ", bg='#28B463', font='BOLD').grid(row=0)
+        gui.iconbitmap("imgs\\gear.ico")
+        gui.configure(bg='#76C2AF')
+        Label(gui, text="Que souhaitez-vous utiliser : ", bg='#76C2AF', font='BOLD').grid(row=0)
         var1 = IntVar()
-        Checkbutton(gui, text="Clique Gauche", variable=var1, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
+        Checkbutton(gui, text="Clique Gauche", variable=var1, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
         var2 = IntVar()
-        Checkbutton(gui, text="Clique Droit", variable=var2, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=2, sticky=W)
+        Checkbutton(gui, text="Clique Droit", variable=var2, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=2, sticky=W)
         var3 = IntVar()
-        Checkbutton(gui, text="Touche Perso.", variable=var3, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=3, sticky=W)
-        Button(gui, text='Valider', command=selectedmode, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+        Checkbutton(gui, text="Touche Perso.", variable=var3, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=3, sticky=W)
+        Button(gui, text='Valider', command=selectedmode, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
         gui.mainloop()
 
         if Selected_Mode == '':
@@ -406,16 +408,16 @@ elif os.path.exists('profile\\profile.json'):
             rdmgui.destroy()
 
         def open_dem():
-          img = Image.open('demo_imgs\\demo_rdm_cps.jpg')
+          img = Image.open('imgs\\demo_rdm_cps.jpg')
           img.show()
 
         rdmgui.title("Mode Aléatoire")
-        rdmgui.configure(bg='#28B463')
-        Label(rdmgui, text="Souhaitez-vous un délai aléatoire entre chaque clique ?", bg='#28B463').grid(row=0, sticky=W)
+        rdmgui.configure(bg='#76C2AF')
+        Label(rdmgui, text="Souhaitez-vous un délai aléatoire entre chaque clique ?", bg='#76C2AF').grid(row=0, sticky=W)
         rep = IntVar()
-        Checkbutton(rdmgui, text="Oui", variable=rep, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
-        Button(rdmgui, text='Voir la démo', command=open_dem, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='1', width='10', 	bd='5', relief=RIDGE).grid(row=2, pady=4)
-        Button(rdmgui, text='TERMINER', command=rdm_ch, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+        Checkbutton(rdmgui, text="Oui", variable=rep, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
+        Button(rdmgui, text='Voir la démo', command=open_dem, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='1', width='10', 	bd='5', relief=RIDGE).grid(row=2, pady=4)
+        Button(rdmgui, text='TERMINER', command=rdm_ch, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
         rdmgui.mainloop()
 
         if Random_Rep == '':
@@ -455,19 +457,19 @@ elif os.path.exists('profile\\profile.json'):
               exit()
 
           moderdm.title("Mode de délai")
-          moderdm.configure(bg='#28B463')
-          Label(moderdm, text="Séléctionnez le type de délai aléatoire :", bg='#28B463').grid(row=0, sticky=W)
+          moderdm.configure(bg='#76C2AF')
+          Label(moderdm, text="Séléctionnez le type de délai aléatoire :", bg='#76C2AF').grid(row=0, sticky=W)
           rep = IntVar()
-          Checkbutton(moderdm, text="Faible", variable=rep, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
+          Checkbutton(moderdm, text="Faible", variable=rep, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
           rep2 = IntVar()
-          Checkbutton(moderdm, text="Normal", variable=rep2, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=2, sticky=W)
+          Checkbutton(moderdm, text="Normal", variable=rep2, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=2, sticky=W)
           rep3 = IntVar()
-          Checkbutton(moderdm, text="Rapide", variable=rep3, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=3, sticky=W)
+          Checkbutton(moderdm, text="Rapide", variable=rep3, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=3, sticky=W)
           rep4 = IntVar()
-          Checkbutton(moderdm, text="Très Rapide", variable=rep4, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=4, sticky=W)
+          Checkbutton(moderdm, text="Très Rapide", variable=rep4, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=4, sticky=W)
           rep5 = IntVar()
-          Checkbutton(moderdm, text="Inhumain", variable=rep5, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=5, sticky=W)
-          Button(moderdm, text='TERMINER', command=rdm_ch, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=6, pady=4)
+          Checkbutton(moderdm, text="Inhumain", variable=rep5, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=5, sticky=W)
+          Button(moderdm, text='TERMINER', command=rdm_ch, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=6, pady=4)
           moderdm.mainloop()
 
         if Random_Rep == 'Inactive':
@@ -505,11 +507,11 @@ elif os.path.exists('profile\\profile.json'):
             secgui.destroy()
 
         secgui.title("Mode d'auto-click")
-        secgui.configure(bg='#28B463')
-        Label(secgui, text="Souhaitez-vous que l'auto-click s'active uniquement lorsque\nque la touche est pressée ou alors appuyer une\nseule fois pour qu'il reste activé ?", bg='#28B463').grid(row=0, sticky=W)
+        secgui.configure(bg='#76C2AF')
+        Label(secgui, text="Souhaitez-vous que l'auto-click s'active uniquement lorsque\nque la touche est pressée ou alors appuyer une\nseule fois pour qu'il reste activé ?", bg='#76C2AF').grid(row=0, sticky=W)
         resp1 = IntVar()
-        Checkbutton(secgui, text="Une seule fois", variable=resp1, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
-        Button(secgui, text='TERMINER', command=gui_kp_yn, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+        Checkbutton(secgui, text="Une seule fois", variable=resp1, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
+        Button(secgui, text='TERMINER', command=gui_kp_yn, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
         secgui.mainloop()
 
         print(' ')
@@ -602,14 +604,14 @@ elif os.path.exists('profile\\profile.json'):
             print(Fore.GREEN + "Configuration sauvegardée.")
 
           guisave.title("Sauvegarde")
-          guisave.configure(bg='#28B463')
-          Label(guisave, text="Souhaitez-vous sauvegarder votre profile ?", bg='#28B463').grid(row=0, sticky=W)
+          guisave.configure(bg='#76C2AF')
+          Label(guisave, text="Souhaitez-vous sauvegarder votre profile ?", bg='#76C2AF').grid(row=0, sticky=W)
           save = IntVar()
-          Checkbutton(guisave, text="Oui", variable=save, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
+          Checkbutton(guisave, text="Oui", variable=save, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
           # Faire un case ne plus monter : est si FALSE, ne plus afficher ce message
           show = IntVar()
-          Checkbutton(guisave, text="Ne plus montrer après", variable=show, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=2, sticky=W)
-          Button(guisave, text='Valider', command=response_for_save, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+          Checkbutton(guisave, text="Ne plus montrer après", variable=show, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=2, sticky=W)
+          Button(guisave, text='Valider', command=response_for_save, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
           guisave.mainloop()
         else:
           SavedFileProfile = 'Yes'
@@ -645,15 +647,16 @@ elif os.path.exists('profile\\profile.json'):
             exit()
 
         gui.title("Configuration")
-        gui.configure(bg='#28B463')
-        Label(gui, text="Que souhaitez-vous utiliser : ", bg='#28B463', font='BOLD').grid(row=0)
+        gui.iconbitmap("imgs\\gear.ico")
+        gui.configure(bg='#76C2AF')
+        Label(gui, text="Que souhaitez-vous utiliser : ", bg='#76C2AF', font='BOLD').grid(row=0)
         var1 = IntVar()
-        Checkbutton(gui, text="Clique Gauche", variable=var1, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
+        Checkbutton(gui, text="Clique Gauche", variable=var1, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
         var2 = IntVar()
-        Checkbutton(gui, text="Clique Droit", variable=var2, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=2, sticky=W)
+        Checkbutton(gui, text="Clique Droit", variable=var2, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=2, sticky=W)
         var3 = IntVar()
-        Checkbutton(gui, text="Touche Perso.", variable=var3, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=3, sticky=W)
-        Button(gui, text='Valider', command=selectedmode, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+        Checkbutton(gui, text="Touche Perso.", variable=var3, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=3, sticky=W)
+        Button(gui, text='Valider', command=selectedmode, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
         gui.mainloop()
 
         if Selected_Mode == '':
@@ -689,16 +692,16 @@ elif os.path.exists('profile\\profile.json'):
             rdmgui.destroy()
 
         def open_dem():
-          img = Image.open('demo_imgs\\demo_rdm_cps.jpg')
+          img = Image.open('imgs\\demo_rdm_cps.jpg')
           img.show()
 
         rdmgui.title("Mode Aléatoire")
-        rdmgui.configure(bg='#28B463')
-        Label(rdmgui, text="Souhaitez-vous un délai aléatoire entre chaque clique ?", bg='#28B463').grid(row=0, sticky=W)
+        rdmgui.configure(bg='#76C2AF')
+        Label(rdmgui, text="Souhaitez-vous un délai aléatoire entre chaque clique ?", bg='#76C2AF').grid(row=0, sticky=W)
         rep = IntVar()
-        Checkbutton(rdmgui, text="Oui", variable=rep, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
-        Button(rdmgui, text='Voir la démo', command=open_dem, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='1', width='10', 	bd='5', relief=RIDGE).grid(row=2, pady=4)
-        Button(rdmgui, text='TERMINER', command=rdm_ch, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+        Checkbutton(rdmgui, text="Oui", variable=rep, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
+        Button(rdmgui, text='Voir la démo', command=open_dem, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='1', width='10', 	bd='5', relief=RIDGE).grid(row=2, pady=4)
+        Button(rdmgui, text='TERMINER', command=rdm_ch, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
         rdmgui.mainloop()
 
         if Random_Rep == '':
@@ -738,19 +741,19 @@ elif os.path.exists('profile\\profile.json'):
               exit()
 
           moderdm.title("Mode de délai")
-          moderdm.configure(bg='#28B463')
-          Label(moderdm, text="Séléctionnez le type de délai aléatoire :", bg='#28B463').grid(row=0, sticky=W)
+          moderdm.configure(bg='#76C2AF')
+          Label(moderdm, text="Séléctionnez le type de délai aléatoire :", bg='#76C2AF').grid(row=0, sticky=W)
           rep = IntVar()
-          Checkbutton(moderdm, text="Faible", variable=rep, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
+          Checkbutton(moderdm, text="Faible", variable=rep, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
           rep2 = IntVar()
-          Checkbutton(moderdm, text="Normal", variable=rep2, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=2, sticky=W)
+          Checkbutton(moderdm, text="Normal", variable=rep2, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=2, sticky=W)
           rep3 = IntVar()
-          Checkbutton(moderdm, text="Rapide", variable=rep3, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=3, sticky=W)
+          Checkbutton(moderdm, text="Rapide", variable=rep3, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=3, sticky=W)
           rep4 = IntVar()
-          Checkbutton(moderdm, text="Très Rapide", variable=rep4, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=4, sticky=W)
+          Checkbutton(moderdm, text="Très Rapide", variable=rep4, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=4, sticky=W)
           rep5 = IntVar()
-          Checkbutton(moderdm, text="Inhumain", variable=rep5, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=5, sticky=W)
-          Button(moderdm, text='TERMINER', command=rdm_ch, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=6, pady=4)
+          Checkbutton(moderdm, text="Inhumain", variable=rep5, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=5, sticky=W)
+          Button(moderdm, text='TERMINER', command=rdm_ch, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=6, pady=4)
           moderdm.mainloop()
 
         if Random_Rep == 'Inactive':
@@ -788,11 +791,11 @@ elif os.path.exists('profile\\profile.json'):
             secgui.destroy()
 
         secgui.title("Mode d'auto-click")
-        secgui.configure(bg='#28B463')
-        Label(secgui, text="Souhaitez-vous que l'auto-click s'active uniquement lorsque\nque la touche est pressée ou alors appuyer une\nseule fois pour qu'il reste activé ?", bg='#28B463').grid(row=0, sticky=W)
+        secgui.configure(bg='#76C2AF')
+        Label(secgui, text="Souhaitez-vous que l'auto-click s'active uniquement lorsque\nque la touche est pressée ou alors appuyer une\nseule fois pour qu'il reste activé ?", bg='#76C2AF').grid(row=0, sticky=W)
         resp1 = IntVar()
-        Checkbutton(secgui, text="Une seule fois", variable=resp1, bg='#28B463', activebackground='#28B463', font='ITALIC').grid(row=1, sticky=W)
-        Button(secgui, text='TERMINER', command=gui_kp_yn, bg='#1D8348', activebackground='#1D8348', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
+        Checkbutton(secgui, text="Une seule fois", variable=resp1, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
+        Button(secgui, text='TERMINER', command=gui_kp_yn, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
         secgui.mainloop()
 
         print(' ')

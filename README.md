@@ -20,7 +20,7 @@ U ; V ; W ; X ; Y ; Z ;
 
 < ; > ; SPACE_BAR ; SHIFT ; CTRL ; ALT ; TAB  
 _______  
-**V1.4.9**  
+**V1.5.12**  
 Discord : ! Cuchi'#1632  
 _______  
 Change log :   
@@ -37,6 +37,10 @@ Change log :
 08/11/20 [/] -	Upgrading some features  
 08/11/20 [+] -	Added profile system  
 08/11/20 [/] -  Fixed issue : Profile not detected
+
+09/11/20 [/] - Menu color edited
+09/11/20 [+] - Added logo to the menu
+09/11/20 [/] - Fixed dependencies issue : The dependencies was not all in the i_dependencies.bat
 _______  
 **I am not responsible for what you do with my program.**   
 **I am also not responsible for any bans generated through the use of this program.**  
