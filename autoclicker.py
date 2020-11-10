@@ -14,12 +14,25 @@ import win32api, win32con
 
 colorama.init(autoreset=True)
 
-Available_Key_List = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9','<','>','SPACE_BAR','SHIFT','CTRL','ALT','TAB', 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9','<','>','space_bar','shift','ctrl','alt','tab']
+Available_Key_List = [
+  'A','B','C','D','E','F',
+  'G','H','I','J','K','L',
+  'M','N','O','P','Q','R',
+  'S','T','U','V','W','X',
+  'Y','Z','0','1','2','3',
+  '4','5','6','7','8','9',
+  '<','>','SPACE_BAR','SHIFT','CTRL','ALT','TAB',
+  'a','b','c','d','e','f',
+  'g','h','i','j','k','l',
+  'm','n','o','p','q','r',
+  's','t','u','v','w','x',
+  'y','z','0','1','2','3',
+  '4','5','6','7','8','9',
+  '<','>','space_bar','shift','ctrl','alt','tab',
+]
 
 if os.path.exists("i_dependencies.bat"):
   os.remove("i_dependencies.bat")
-
-
 
 a = False
 Perso_Key_To_Press = ''
