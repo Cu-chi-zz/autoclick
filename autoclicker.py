@@ -323,7 +323,6 @@ if not os.path.exists('profile\\profile.json'):
     Label(guisave, text="Souhaitez-vous sauvegarder votre profile ?", bg='#76C2AF').grid(row=0, sticky=W)
     save = IntVar()
     Checkbutton(guisave, text="Oui", variable=save, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
-    # Faire un case ne plus monter : est si FALSE, ne plus afficher ce message
     show = IntVar()
     Checkbutton(guisave, text="Ne plus montrer après", variable=show, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=2, sticky=W)
     Button(guisave, text='Valider', command=response_for_save, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
@@ -608,7 +607,6 @@ elif os.path.exists('profile\\profile.json'):
           Label(guisave, text="Souhaitez-vous sauvegarder votre profile ?", bg='#76C2AF').grid(row=0, sticky=W)
           save = IntVar()
           Checkbutton(guisave, text="Oui", variable=save, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=1, sticky=W)
-          # Faire un case ne plus monter : est si FALSE, ne plus afficher ce message
           show = IntVar()
           Checkbutton(guisave, text="Ne plus montrer après", variable=show, bg='#76C2AF', activebackground='#76C2AF', font='ITALIC').grid(row=2, sticky=W)
           Button(guisave, text='Valider', command=response_for_save, bg='#609E8F', activebackground='#609E8F', font='ITALIC', height='2', width='15', 	bd='5', relief=RIDGE).grid(row=4, pady=4)
