@@ -21,7 +21,7 @@ U ; V ; W ; X ; Y ; Z ;
 < ; > ; SPACE_BAR ; SHIFT ; CTRL ; ALT ; TAB  
 _______  
 **V1.5.12**  
-Discord : ! Cuchi'#1632  
+Discord : ! Cuchi'#3120
 _______  
 Change log :   
 05/11/20 [+] -	Started  
